@@ -4,15 +4,11 @@
 name: Run module tests
 
 on:
-  push:
-    branches:
-      - 'main'
-  pull_request:
-    branches:
-      - 'main'
+  schedule:
+    - cron : "0 */12 * * *"
 
 jobs:
-  build and test:
+  test:
 
     runs-on: ubuntu-latest
 
